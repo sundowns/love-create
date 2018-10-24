@@ -10,7 +10,7 @@ A script to generate a new LOVE2D project, including a main.lua file with empty 
 * Add the following to `~/.bash_profile` (replace <PATH_TO_THIS_FOLDER> with the correct path):
 
 ```shell
-create-love() {
+love-create() {
     if [ -z "$1" ]
     then
         echo "No argument supplied"
