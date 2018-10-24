@@ -20,7 +20,7 @@ create-love() {
 }
 ```
 
-Note: <PATH_TO_THIS_FOLDER> can be ommitted if the directory containing `love-create-.lua` is a part of the PATH variable.
+Note: <PATH_TO_THIS_FOLDER> can be ommitted if the directory containing `love-create.lua` is a part of the PATH variable.
 
 ----------------------------
 
