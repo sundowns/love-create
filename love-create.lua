@@ -19,6 +19,10 @@ end
 function love.keypressed(key)
     if key == "f1" then
         debug = not debug
+    elseif key == "escape" then
+        love.event.quit()
+    elseif key == "space" then
+        love.event.quit('restart')
     end
 end
 ]]
