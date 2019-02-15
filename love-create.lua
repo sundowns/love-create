@@ -5,7 +5,7 @@ local emphasisColour = "\27[33m"
 
 local sampleMain = [[
 love.filesystem.setRequirePath(love.filesystem.getRequirePath()..";lib/?.lua;lib/;")
-debug = false
+DEBUG = false
 
 function love.load()
 end
@@ -18,7 +18,7 @@ end
 
 function love.keypressed(key)
     if key == "f1" then
-        debug = not debug
+        DEBUG = not DEBUG
     elseif key == "escape" then
         love.event.quit()
     elseif key == "space" then
@@ -30,8 +30,8 @@ end
 local sampleConf = [[
 function love.conf(t)
     t.window.title = "New Love Project"
-    t.window.height = 400
-    t.window.width = 400
+    t.window.width = 1366
+    t.window.height = 768
 end
 ]]
 
@@ -75,7 +75,7 @@ success("Generating new LOVE2D project with name: \27[0m\27[1m'".. directory..'\
 execute("mkdir " .. directory, "Created root directory: "..resetColour..'\''..directory..'\'')
 execute("cd "..directory.." && mkdir lib", "Created lib directory", "Failed to create lib directory in ".. directory)
 execute("cd "..directory.." && mkdir asset", "Created asset directory", "Failed to create asset directory in ".. directory)
-execute("cd "..directory.." && mkdir class", "Created class directory", "Failed to create class directory in ".. directory)
+execute("cd "..directory.." && mkdir src", "Created class directory", "Failed to create src directory in ".. directory)
 execute("cd "..directory.." && touch main.lua", "Created main.lua", "Failed to create main.lua file in "..directory)
 local f = io.open(directory.."/main.lua", "w")
 if f then

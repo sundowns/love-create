@@ -35,7 +35,7 @@ Constructs a directory named **'my-new-project'** with the following contents:
 ```shell
 - lib/
 - asset/
-- class/
+- src/
 - main.lua
 - conf.lua
 ```
@@ -44,7 +44,7 @@ The generated `main.lua` file's contents can be overriden by modifying `love-cre
 
 ```lua
 love.filesystem.setRequirePath(love.filesystem.getRequirePath()..";lib/?.lua;lib/;")
-debug = false
+DEBUG = false
 
 function love.load()
 end
@@ -57,7 +57,11 @@ end
 
 function love.keypressed(key)
     if key == "f1" then
-        debug = not debug
+        DEBUG = not DEBUG
+    elseif key == "escape" then
+        love.event.quit()
+    elseif key == "space" then
+        love.event.quit('restart')
     end
 end
 ```
