@@ -75,7 +75,7 @@ success("Generating new LOVE2D project with name: \27[0m\27[1m'".. directory..'\
 execute("mkdir " .. directory, "Created root directory: "..resetColour..'\''..directory..'\'')
 execute("cd "..directory.." && mkdir lib", "Created lib directory", "Failed to create lib directory in ".. directory)
 execute("cd "..directory.." && mkdir asset", "Created asset directory", "Failed to create asset directory in ".. directory)
-execute("cd "..directory.." && mkdir src", "Created class directory", "Failed to create src directory in ".. directory)
+execute("cd "..directory.." && mkdir src", "Created src directory", "Failed to create src directory in ".. directory)
 execute("cd "..directory.." && touch main.lua", "Created main.lua", "Failed to create main.lua file in "..directory)
 local f = io.open(directory.."/main.lua", "w")
 if f then
