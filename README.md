@@ -2,12 +2,12 @@
 
 A script to generate a new LOVE2D project, including a main.lua file with empty call-back functions.
 
-----------------------------
+---
 
 ## Installation
 
-* Install Lua and ensure it is correctly referenced in the PATH variable.
-* Add the following to `~/.bash_profile` (replace <PATH_TO_THIS_FOLDER> with the correct path):
+- Install Lua and ensure it is correctly referenced in the PATH variable.
+- Add the following to `~/.bash_profile` (replace <PATH_TO_THIS_FOLDER> with the correct path):
 
 ```shell
 love-create() {
@@ -15,14 +15,14 @@ love-create() {
     then
         echo "No argument supplied"
     else
-        command lua.exe <PATH_TO_THIS_FOLDER>/love-create.lua $1
+        command lua <PATH_TO_THIS_FOLDER>/love-create.lua $1
     fi
 }
 ```
 
 Note: <PATH_TO_THIS_FOLDER> can be ommitted if the directory containing `love-create.lua` is a part of the PATH variable.
 
-----------------------------
+---
 
 ## Usage
 
